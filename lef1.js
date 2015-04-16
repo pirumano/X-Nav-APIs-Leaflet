@@ -59,6 +59,24 @@ function addr_search(){
 			$('<p>', { html: "No results found" }).appendTo('#results');
 		}
 	});
+
+	var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+    var tag = $("#addr").val();
+
+    $.getJSON( flickerAPI, {
+      tags: tag,
+      tagmode: "any",
+      format: "json"
+    })
+      .done(function( data ) {
+        $("#images").empty();
+        $.each( data.items, function( i, item ) {
+          $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+          if(i == 5)
+            return false;
+         
+        });
+      });
 }
 
 function chooseAddr(lat, lng, type) {
