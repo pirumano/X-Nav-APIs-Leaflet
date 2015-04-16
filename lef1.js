@@ -72,9 +72,8 @@ function addr_search(){
         $("#images").empty();
         $.each( data.items, function( i, item ) {
           $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
-          if(i == 5)
+          if(i == 4)
             return false;
-         
         });
       });
 }
@@ -93,4 +92,5 @@ function chooseAddr(lat, lng, type) {
 function reset_results(){
 	document.getElementById("results").innerHTML = "";
 	document.getElementById("addr").value = "";
+	document.getElementById("images").innerHTML = "";
 }
