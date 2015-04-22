@@ -1,0 +1,11 @@
+{
+	"name": "Mapa Leaflet",
+	"description": "Mapa con tecnologia Leaflet",
+	"launch_path": "pirumano.github.io/X-Nav-APIs-Map-Flickr/index.html",
+	"version": "1.5",
+	"developer":{
+		"name": "Alberto Garcia de Marina",
+		"empresa": "URJC"
+	}
+	"default_locale": "en"
+}
